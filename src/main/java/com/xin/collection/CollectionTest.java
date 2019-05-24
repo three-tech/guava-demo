@@ -27,9 +27,9 @@ public class CollectionTest {
         printLineSeparator();
         printSeparator("lists");
 
-        List countUp = Ints.asList(1, 2, 3, 4, 5);
-        List countDown = Lists.reverse(countUp); // {5, 4, 3, 2, 1}
-        List<List> parts = Lists.partition(countUp, 2);//把 List 按指定大小分割  {{1,2}, {3,4}, {5}}
+        List       countUp   = Ints.asList(1, 2, 3, 4, 5);
+        List       countDown = Lists.reverse(countUp); // {5, 4, 3, 2, 1}
+        List<List> parts     = Lists.partition(countUp, 2);//把 List 按指定大小分割  {{1,2}, {3,4}, {5}}
 
         System.out.println(countDown);
         System.out.println(parts);
@@ -38,7 +38,7 @@ public class CollectionTest {
 
         printSeparator("sets");
         Set<String> wordsWithPrimeLength = ImmutableSet.of("one", "two", "three", "six", "seven", "eight");
-        Set<String> primes = ImmutableSet.of("two", "three", "five", "seven");
+        Set<String> primes               = ImmutableSet.of("two", "three", "five", "seven");
         System.out.println(Sets.union(wordsWithPrimeLength, primes));
         Sets.SetView<String> intersection = Sets.intersection(primes, wordsWithPrimeLength);
         // intersection包含"two", "three", "seven"
@@ -46,7 +46,7 @@ public class CollectionTest {
 
 
         Set<String> animals = ImmutableSet.of("gerbil", "hamster");
-        Set<String> fruits = ImmutableSet.of("apple", "orange", "banana");
+        Set<String> fruits  = ImmutableSet.of("apple", "orange", "banana");
         System.out.println(Sets.cartesianProduct(animals, fruits));//返回􏰀有集合的笛卡儿积
         Set<Set<String>> animalSets = Sets.powerSet(animals);//返回给定集合的􏰀有子集
         System.out.println(JSON.toJSONString(animalSets));
@@ -72,9 +72,9 @@ public class CollectionTest {
         System.out.println("entriesOnlyOnLeft()       键只存在于左边 Map 的映射项");
         System.out.println("entriesOnlyOnRight()      键只存在于右边 Map 的映射项");
 
-        Map<String, Integer> left = ImmutableMap.of("a", 1, "b", 2, "c", 3);
-        Map<String, Integer> right = ImmutableMap.of("a", 2, "d", 2, "c", 3);
-        MapDifference<String, Integer> diff = Maps.difference(left, right);
+        Map<String, Integer>           left  = ImmutableMap.of("a", 1, "b", 2, "c", 3);
+        Map<String, Integer>           right = ImmutableMap.of("a", 2, "d", 2, "c", 3);
+        MapDifference<String, Integer> diff  = Maps.difference(left, right);
 
         System.out.println(diff.entriesInCommon());
         System.out.println(diff.entriesDiffering());

@@ -10,7 +10,7 @@ import com.google.common.collect.ImmutableSet;
  */
 public class ImmutableTest {
 
-    public static final ImmutableSet<String> COLOR_NAMES = ImmutableSet.of("red",
+    public static final ImmutableSet<String>          COLOR_NAMES  = ImmutableSet.of("red",
             "orange", "yellow", "green", "blue", "purple");
     public static final ImmutableMap<String, Integer> immutableMap = ImmutableMap.of("a", 1, "b", 2);
 

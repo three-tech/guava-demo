@@ -11,7 +11,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Person {
     private String name;
-    private int age;
+    private int    age;
 
     public static Person build(String name, int age) {
         return new Person(name, age);

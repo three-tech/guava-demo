@@ -26,9 +26,9 @@ public class FunctionTest {
         System.out.println(Maps.filterKeys(ImmutableMap.of("1", 1, "2", 2), Predicates.contains(Pattern.compile("1"))));
         System.out.println(Maps.transformValues(ImmutableMap.of("a", 1, "b", 2), transform()));
 
-        List<String> names = Lists.newArrayList("a", "b");
+        List<String>        names          = Lists.newArrayList("a", "b");
         Map<String, Person> personWithName = ImmutableMap.of("a", build("a", 12), "b", build("b", 34));
-        List<Person> people = Lists.transform(names, Functions.forMap(personWithName));
+        List<Person>        people         = Lists.transform(names, Functions.forMap(personWithName));
         System.out.println(people);
 
         ListMultimap<String, String> firstNameToLastNames = ArrayListMultimap.create();

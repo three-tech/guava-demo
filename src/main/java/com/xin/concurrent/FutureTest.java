@@ -27,9 +27,9 @@ public class FutureTest {
     }
 
     private static void jdkFutureTest() throws Exception {
-        Callable acct = new CallableBean(2l, 3l, 34l, 53l, 243l);
-        FutureTask task = new FutureTask(acct);
-        Thread thread = new Thread(task);
+        Callable   acct   = new CallableBean(2l, 3l, 34l, 53l, 243l);
+        FutureTask task   = new FutureTask(acct);
+        Thread     thread = new Thread(task);
         System.out.println("futureTask线程现在开始启动，启动时间为：" + System.nanoTime());
         thread.start();
         System.out.println("主线程开始执行其他任务");

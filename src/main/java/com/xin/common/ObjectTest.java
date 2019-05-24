@@ -25,8 +25,8 @@ public class ObjectTest {
 
 
         System.out.println("********hashCode********");
-        String field = "test";
-        Map<String, Object> map = Maps.newHashMap();
+        String              field = "test";
+        Map<String, Object> map   = Maps.newHashMap();
         System.out.println(Objects.hashCode(field, map));
 
 
@@ -49,7 +49,7 @@ public class ObjectTest {
             foos.add(new Foo("string" + i, i, i));
         }
         System.out.println(ordering.isOrdered(foos));
-        System.out.println(JSON.toJSONString(ordering.greatestOf(foos,10)));
+        System.out.println(JSON.toJSONString(ordering.greatestOf(foos, 10)));
 
     }
 }
@@ -58,8 +58,8 @@ public class ObjectTest {
 @Data
 class Foo {
     String aString;
-    int anInt;
-    int sortedBy;
+    int    anInt;
+    int    sortedBy;
 
     int compareTo(Foo that) {
         return ComparisonChain.start()
